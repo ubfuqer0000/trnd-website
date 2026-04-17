@@ -1,0 +1,109 @@
+﻿
+> trnd-agency@1.0.0 build
+> vite build
+
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32mظ£ô[39m 2119 modules transformed.
+node.exe : [31mx[39m 
+Build failed in 4.80s
+At C:\Program 
+Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo       
+       : NotSpecified:   
+  ([31mx[39m Build f   
+ ailed in 4.80s:Strin    
+g) [], RemoteExcepti    
+on
+    + FullyQualifiedErro 
+   rId : NativeCommandE  
+  rror
+ 
+[31merror during build:
+[31msrc/components/layou
+t/Footer.jsx (3:9): 
+"Instagram" is not 
+exported by "node_modules
+/lucide-react/dist/esm/lu
+cide-react.js", imported 
+by "src/components/layout
+/Footer.jsx".[31m
+file: [36mD:/TRND 
+agency - Copy/src/compone
+nts/layout/Footer.jsx:3:9
+[31m
+[33m
+1: import React from 
+'react';
+2: import { Link } from 
+'react-router-dom';
+3: import { Instagram, 
+Linkedin, Facebook, 
+ArrowRight } from 
+'lucide-react';
+            ^
+4: import { NAV_LINKS } 
+from 
+'../../constants/data';
+[31m
+    at getRollupError (fi
+le:///D:/TRND%20agency%20
+-%20Copy/node_modules/rol
+lup/dist/es/shared/parseA
+st.js:406:41)
+    at error (file:///D:/
+TRND%20agency%20-%20Copy/
+node_modules/rollup/dist/
+es/shared/parseAst.js:402
+:42)
+    at Module.error (file
+:///D:/TRND%20agency%20-%
+20Copy/node_modules/rollu
+p/dist/es/shared/node-ent
+ry.js:17065:16)
+    at 
+Module.traceVariable (fil
+e:///D:/TRND%20agency%20-
+%20Copy/node_modules/roll
+up/dist/es/shared/node-en
+try.js:17477:29)
+    at 
+ModuleScope.findVariable 
+(file:///D:/TRND%20agency
+%20-%20Copy/node_modules/
+rollup/dist/es/shared/nod
+e-entry.js:15090:39)
+    at ReturnValueScope.f
+indVariable (file:///D:/T
+RND%20agency%20-%20Copy/n
+ode_modules/rollup/dist/e
+s/shared/node-entry.js:56
+76:38)
+    at FunctionBodyScope.
+findVariable (file:///D:/
+TRND%20agency%20-%20Copy/
+node_modules/rollup/dist/
+es/shared/node-entry.js:5
+676:38)
+    at Identifier.bind (f
+ile:///D:/TRND%20agency%2
+0-%20Copy/node_modules/ro
+llup/dist/es/shared/node-
+entry.js:5450:40)
+    at 
+CallExpression.bind (file
+:///D:/TRND%20agency%20-%
+20Copy/node_modules/rollu
+p/dist/es/shared/node-ent
+ry.js:2828:28)
+    at 
+CallExpression.bind (file
+:///D:/TRND%20agency%20-%
+20Copy/node_modules/rollu
+p/dist/es/shared/node-ent
+ry.js:12199:15)[39m
