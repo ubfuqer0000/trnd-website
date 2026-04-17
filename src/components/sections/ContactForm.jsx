@@ -5,11 +5,14 @@ import emailjs from '@emailjs/browser';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
 
-// ─── EmailJS credentials – fill these in before going live ───────────────────
-const EMAILJS_SERVICE_ID = 'service_ew1jnlu';   // e.g. 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'template_zannb59';  // e.g. 'template_xyz789'
-const EMAILJS_PUBLIC_KEY = 'tajfyKTHn0M6YaLpL';   // e.g. 'ABCdEfGhIjKlMnOp'
-// ─────────────────────────────────────────────────────────────────────────────
+// تأكد من وضع هذه القيم في ملف .env في جذر المشروع (Root)
+// VITE_EMAILJS_SERVICE_ID=your_id
+// VITE_EMAILJS_TEMPLATE_ID=your_id
+// VITE_EMAILJS_PUBLIC_KEY=your_key
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'SERVICE_ID_HERE';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'TEMPLATE_ID_HERE';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'PUBLIC_KEY_HERE';
 
 const ContactForm = () => {
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
@@ -22,8 +25,12 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.fullName || !formData.email || !formData.message) {
+    // تنظيف المدخلات من الفراغات الزائدة قبل الفحص
+    const { fullName, email, message, subject } = formData;
+
+    if (!fullName.trim() || !email.trim() || !message.trim()) {
       setStatus('error');
+      console.log('Missing fields:', { fullName, email, message });
       setTimeout(() => setStatus('idle'), 3000);
       return;
     }
@@ -31,16 +38,18 @@ const ContactForm = () => {
     setStatus('loading');
 
     try {
+      const templateParams = {
+        fullName: fullName.trim(),
+        email: email.trim(),
+        subject: subject.trim() || 'No Subject',
+        message: message.trim(),
+        to_email: 'info@thetrnd.com', // هذا الإيميل سيظهر داخل التيمبلت
+      };
+
       const result = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        {
-          fullName: formData.fullName,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: 'info@thetrnd.com',
-        },
+        templateParams,
         EMAILJS_PUBLIC_KEY
       );
 
@@ -50,7 +59,7 @@ const ContactForm = () => {
         setTimeout(() => setStatus('idle'), 4000);
       }
     } catch (error) {
-      console.error('EmailJS error:', error);
+      console.error('EmailJS Error Details:', error);
       setStatus('error');
       setTimeout(() => setStatus('idle'), 4000);
     }
