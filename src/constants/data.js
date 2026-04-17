@@ -23,21 +23,23 @@ import IconMonitoring from '../assets/icons/icon-monitoring.svg?react';
 import IconEditing from '../assets/icons/icon-video-edit.svg?react';
 
 export const TEAM_MEMBERS = [
-  { id: 1, name: "Khalid Sallam", title: "CEO & Team Leader", image: "/assets/team/Khalid Sallam.png" },
-  { id: 2, name: "Amal Al-Shaibany", title: "Operations Manager", image: "/assets/team/Amal Al-Shaibany.png" },
-  { id: 3, name: "Ahmed Sallam", title: "Artist Supervisor", image: "/assets/team/Ahmed Sallam.png" },
-  { id: 4, name: "Mohammed Hamoud", title: "Creative Director", image: "/assets/team/Mohammed Hamoud.png" },
-  { id: 5, name: "Nuha Al-Asbahi", title: "Account Executive", image: "/assets/team/Nuha Al-Asbahi.png" },
-  { id: 6, name: "Amjed Natheer", title: "IT", image: "/assets/team/Amjed Natheer.png" },
-  { id: 7, name: "Murad Omar", title: "Senior Graphic Design", image: "/assets/team/Murad Omar.png" },
-  { id: 8, name: "Weam Al-Adashi", title: "Senior Editor", image: "/public/assets/team/Weam Al-Adashi.png" },
-  { id: 9, name: "Garnet", title: "International Writer & Proofreader", image: "/assets/team/Garnet.png" },
-  { id: 10, name: "Mohammed Nasher", title: "Communication Assistant", image: "/assets/team/Mohammed Nasher.png" },
-  { id: 11, name: "Ahmed Abduljaleel", title: "Senior Animator & Illustrator", image: "/assets/team/Ahmed Abduljaleel.png" },
-  { id: 12, name: "Sofia", title: "Voice Over", image: "/assets/team/Sofia.png" },
-  { id: 13, name: "Nather Al-Areqi", title: "Liaisons and PR", image: "/assets/team/Natheer Al-Areqi.png" },
-  { id: 14, name: "Ala'a Abdulqader", title: "Finance", image: "/assets/team/Alaa Abdulqader.png" },
-  { id: 15, name: "Haneen Mohammed", title: "HR", image: "/assets/team/Haneen Mohammed.png" },
+  { id: 1, name: "Khalid Sallam", title: "CEO & Team Leader", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428885/Khalid_Sallam_r2va7n.png" },
+  { id: 2, name: "Amal Al-Shaibany", title: "Operations Manager", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428848/Amal_Al-Shaibany_tzvu2k.png" },
+  { id: 3, name: "Ahmed Sallam", title: "Artist Supervisor", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428853/Ahmed_Sallam_yemdy6.png" },
+  { id: 4, name: "Mohammed Hamoud", title: "Creative Director", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428897/Mohammed_Hamoud_lvuihv.png" },
+  { id: 5, name: "Nuha Al-Asbahi", title: "Account Executive", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428922/Nuha_Al-Asbahi_aoptfe.png" },
+  { id: 6, name: "Amjed Natheer", title: "IT", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428855/Amjed_Natheer_vlyoj8.png" },
+  { id: 7, name: "Murad Omar", title: "Senior Graphic Design", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428904/Murad_Omar_cdibbz.png" },
+  { id: 8, name: "Weam Al-Adashi", title: "Senior Editor", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428917/Weam_Al-Adashi_g2mmt9.png" },
+  { id: 9, name: "Garnet", title: "International Writer & Proofreader", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428883/Garnet_lj816p.png" },
+  { id: 10, name: "Mohammed Nasher", title: "Communication Assistant", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428900/Mohammed_Nasher_racerm.png" },
+  { id: 11, name: "Ahmed Abduljaleel", title: "Senior Animator & Illustrator", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428836/Ahmed_Abduljaleel_ep32qx.png" },
+  { id: 12, name: "Sofia", title: "Voice Over", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428911/Sofia_hcftu8.png" },
+  { id: 13, name: "Nather Al-Areqi", title: "Liaisons and PR", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428911/Natheer_Al-Areqi_pyvivm.png" },
+  { id: 14, name: "Ala'a Abdulqader", title: "Finance", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428858/Alaa_Abdulqader_neivcx.png" },
+  { id: 15, name: "Haneen Mohammed", title: "HR", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428867/Haneen_Mohammed_jisrwy.png" },
+  { id: 16, name: "Mahfoud Al-Shami", title: "Team Member", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428895/Mahfoud_Al-Shami_niucek.png" },
+  { id: 17, name: "Ammar Al-Matari", title: "Team Member", image: "https://res.cloudinary.com/dzzrrq9mo/image/upload/f_auto,q_auto/v1776428894/Ammar_Al-Matari_audxey.png" },
 ];
 
 export const SERVICES = [
@@ -156,7 +158,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 8,
-    src: "/assets/portfolio/Day 0 Reel.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776429538/Showreel.c_mx2cnd.mp4",
     type: "video",
     category: "digital",
     title: "Day 0 Agency Reel",
@@ -172,7 +174,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 10,
-    src: "/assets/portfolio/E-Wallet Motion Video - Onecash (2).mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776428945/Copy_of_6-_%D9%85%D8%B9_%D9%88%D9%86_%D9%83%D8%A7%D8%B4_%D9%83%D9%84_%D8%B4%D9%8A_%D9%8A%D8%AA%D8%B1%D8%AA%D8%A8_vzctmr.mp4",
     type: "video",
     category: "animation",
     title: "Onecash: E-Wallet Motion II",
@@ -180,7 +182,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 11,
-    src: "/assets/portfolio/E-Wallet Motion Video - Onecash (3).mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776428621/Copy_of_8-_%D9%85%D9%86_%D9%88%D9%86_%D9%83%D8%A7%D8%B4_%D9%84%D9%88%D9%86_%D9%83%D8%A7%D8%B4_%D8%A8%D8%A8%D9%84%D8%A7%D8%B4_krghsu.mp4",
     type: "video",
     category: "animation",
     title: "Onecash: E-Wallet Motion III",
@@ -188,7 +190,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 12,
-    src: "/assets/portfolio/E-Wallet Motion Video - Onecash.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776429638/Copy_of_3-_%D8%A7%D9%84%D9%83%D9%84_%D8%B5%D8%A7%D8%B1_%D9%88%D9%86_%D9%83%D8%A7%D8%B4_%D8%A8%D8%A7%D9%82%D9%8A_%D8%A7%D9%86%D8%AA_filn15.mp4",
     type: "video",
     category: "animation",
     title: "Onecash: E-Wallet Motion",
@@ -196,7 +198,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 13,
-    src: "/assets/portfolio/Entelaqah - HSA.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776428622/Entelaqah_Final_Video_With_HSA_Logo_uedmyf.mp4",
     type: "video",
     category: "branding",
     title: "Entelaqah: Corporate Launch",
@@ -228,7 +230,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 17,
-    src: "/assets/portfolio/Infographic Video - ONE Cash.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776429058/ONE_Cash_Infographic_Video_-_Final_thbagt.mp4",
     type: "video",
     category: "animation",
     title: "ONE Cash Infographic",
@@ -260,7 +262,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 21,
-    src: "/assets/portfolio/PSC-Explainer Animation.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776429636/PSC-Explainer_Animation_with_translation_q6nmzc.mp4",
     type: "video",
     category: "animation",
     title: "PSC Explainer Animation",
@@ -284,7 +286,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 24,
-    src: "/assets/portfolio/SOS_ أغنية متعايشين_ هاني الشيباني- Promo_ Final.mp4",
+    src: "https://res.cloudinary.com/dzzrrq9mo/video/upload/f_auto,q_auto/v1776429758/SOS__%D8%A3%D8%BA%D9%86%D9%8A%D8%A9_%D9%85%D8%AA%D8%B9%D8%A7%D9%8A%D8%B4%D9%8A%D9%86__%D9%87%D8%A7%D9%86%D9%8A_%D8%A7%D9%84%D8%B4%D9%8A%D8%A8%D8%A7%D9%86%D9%8A-_Promo__Final_u1ay52.mp4",
     type: "video",
     category: "digital",
     title: "SOS: Mutaaishin Promo",
