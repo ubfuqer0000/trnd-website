@@ -23,7 +23,7 @@ const PartnerMarquee = () => {
               alt="Partner"
               // تحسين التحميل: الصور خارج الشاشة لا تحمل فوراً
               loading="lazy" 
-              className="h-12 md:h-16 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500 hover:scale-110"
+              className="h-40 md:h-40 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500 hover:scale-110"
             />
           ))}
         </div>
