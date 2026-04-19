@@ -131,6 +131,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-brand-dark text-white font-montserrat antialiased overflow-x-hidden;
   }

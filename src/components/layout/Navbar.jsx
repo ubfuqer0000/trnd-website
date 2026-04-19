@@ -38,7 +38,7 @@ export default React.memo(function Navbar() {
             <img
               src="/assets/logo/Artboard 2.svg"
               alt="TRND"
-              className={`w-auto transition-all duration-500 mix-blend-screen ${scrolled ? 'h-10' : 'h-16'}`}
+              className={`w-auto transition-all duration-500 mix-blend-screen ${scrolled ? 'h-16' : 'h-40'}`}
             />
           </Link>
 
