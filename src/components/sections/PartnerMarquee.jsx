@@ -40,7 +40,7 @@ const PartnerMarquee = () => {
                 alt="Partner"
                 loading="lazy"
                 // التغيير الجوهري هنا: حجم أصغر للجوال (h-12) وأكبر قليلاً للابتوب (h-20)
-                className="h-12 md:h-20 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-300 transform-gpu"
+                className="h-20 md:h-40 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-300 transform-gpu"
               />
             </div>
           ))}
