@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { ArrowRight, LucideInstagram as Instagram, LucideLinkedin as Linkedin, LucideFacebook as Facebook } from 'lucide-react';
 import { NAV_LINKS } from '../../constants/data';
 
 const Footer = () => {
