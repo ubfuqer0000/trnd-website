@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 const CustomCursor = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  // استخدمنا السبرينج للحركة السلسة فقط
   const mouseX = useSpring(0, { stiffness: 500, damping: 28, mass: 0.5 });
   const mouseY = useSpring(0, { stiffness: 500, damping: 28, mass: 0.5 });
 
@@ -12,17 +12,7 @@ const CustomCursor = () => {
       mouseY.set(e.clientY);
     };
 
-    const handleHover = () => setIsHovered(true);
-    const handleUnhover = () => setIsHovered(false);
-
     window.addEventListener('mousemove', handleMouseMove);
-    
-    // نحدد جميع العناصر التفاعلية
-    const interactiveElements = document.querySelectorAll('a, button, .interactive, p, h1, h2, h3, span');
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', handleHover);
-      el.addEventListener('mouseleave', handleUnhover);
-    });
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
@@ -31,16 +21,16 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      // تم حذف mix-blend-difference وأضفنا opacity خفيفة لكي لا يغطي النص تماماً
-      className="fixed top-0 left-0 w-6 h-6 bg-brand-blue rounded-full pointer-events-none z-[9999] hidden md:block"
+      // الكلاسات الأساسية: حجم ثابت (w-5 h-5) ولون البراند
+      className="fixed top-0 left-0 w-5 h-5 bg-[#3B6AFF] rounded-full pointer-events-none z-[9999] hidden md:block"
       style={{
         x: mouseX,
         y: mouseY,
         translateX: '-50%',
         translateY: '-50%',
-        scale: isHovered ? 2.5 : 1,
-        // أضفنا شفافية بسيطة عند الهوفر ليعطي تأثيراً جمالياً خلف النص
-        opacity: isHovered ? 0.6 : 1,
+        // حجم ثابت 1 لا يتغير أبداً
+        scale: 1,
+        opacity: 1,
       }}
     />
   );
