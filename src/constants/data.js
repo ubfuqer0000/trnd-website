@@ -92,7 +92,7 @@ export const SERVICES = [
 ];
 
 export const NAV_LINKS = [
-  { name: "About", path: "/" },
+  { name: "About Us", path: "/#about" }, 
   { name: "Services", path: "/services" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Contact Us", path: "/contact" },

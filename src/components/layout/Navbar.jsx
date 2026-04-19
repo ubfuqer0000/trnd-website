@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { NAV_LINKS } from '../../constants/data';
 
 export default React.memo(function Navbar() {
@@ -46,12 +47,17 @@ export default React.memo(function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-10">
               {NAV_LINKS.map(item => (
-                <Link key={item.name} to={item.path} className="group relative py-2">
+                <HashLink 
+                  key={item.name} 
+                  smooth 
+                  to={item.path} 
+                  className="group relative py-2"
+                >
                   <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white/50 group-hover:text-brand-blue transition-colors">
                     {item.name}
                   </span>
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-brand-blue transition-all duration-300 group-hover:w-full" />
-                </Link>
+                </HashLink>
               ))}
             </div>
 
@@ -101,12 +107,13 @@ export default React.memo(function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.1 }}
                 >
-                  <Link
+                  <HashLink
+                    smooth
                     to={item.path}
                     className="text-5xl font-black uppercase tracking-tighter text-white hover:text-brand-blue transition-colors"
                   >
                     {item.name}
-                  </Link>
+                  </HashLink>
                 </motion.div>
               ))}
             </nav>

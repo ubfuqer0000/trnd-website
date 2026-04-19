@@ -20,19 +20,22 @@ export default memo(function HomeHero() {
     offset: ['start start', 'end end']
   });
 
-  const videoY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']); // تقليل حركة الفيديو في الجوال لمنع التشتت
+  const videoY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']); 
 
   const rawScale = useTransform(scrollYProgress, [0, 0.6], [1, 20]);
   const layerScale = useSpring(rawScale, { stiffness: 100, damping: 30, mass: 0.1 });
 
-  // تسريع اختفاء النص قليلاً ليتناسب مع سكرول الجوال السريع
   const textOpacity = useTransform(scrollYProgress, [0, 0.15, 0.35], [1, 0.5, 0]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
 
   const textVisibility = useTransform(scrollYProgress, p => p > 0.4 ? "hidden" : "visible");
 
   return (
-    <section ref={sectionRef} className="relative h-[250vh] md:h-[300vh] bg-brand-dark">
+    <section 
+      id="home" 
+      ref={sectionRef} 
+      className="relative h-[250vh] md:h-[300vh] bg-brand-dark"
+    >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
 
         <motion.div style={{ y: videoY }} className="absolute inset-0 w-full h-full">
@@ -69,11 +72,11 @@ export default memo(function HomeHero() {
           >
             Shape it <span className="text-brand-blue block md:inline">ALL!</span>
           </h1>
-          
-        
         </motion.div>
 
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-brand-dark/50 md:to-brand-dark/30 pointer-events-none" />
+        
+        {/* Decorative Blur Orbs */}
         <div className="absolute top-[10%] right-[5%] md:top-[20%] md:right-[10%] w-32 md:w-40 h-32 md:h-40 bg-brand-blue/30 rounded-full blur-[80px] md:blur-[100px] pointer-events-none mix-blend-screen animate-[pulse_3s_ease-in-out_infinite]" />
         <div className="absolute bottom-[10%] left-[5%] md:bottom-[20%] md:left-[10%] w-48 md:w-72 h-48 md:h-72 bg-brand-blue/20 rounded-full blur-[90px] md:blur-[120px] pointer-events-none mix-blend-screen animate-[pulse_5s_ease-in-out_infinite]" />
 

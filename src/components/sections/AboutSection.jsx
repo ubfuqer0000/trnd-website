@@ -4,7 +4,10 @@ import { motion } from 'framer-motion';
 const AboutSection = () => {
   return (
     // أضفنا id="about" هنا لربطه بشريط التنقل
-    <section id="about" className="py-28 px-6 md:px-16 relative w-full overflow-hidden">
+    <section 
+  id="about" 
+  className="py-28 px-6 md:px-16 relative w-full scroll-mt-20"
+>
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#3B6AFF]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="blue-separator absolute top-0 left-0 right-0"></div>
       

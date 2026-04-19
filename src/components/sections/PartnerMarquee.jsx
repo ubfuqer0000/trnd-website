@@ -24,16 +24,16 @@ const PartnerMarquee = () => {
       {/* Marquee Container */}
       <div className="flex overflow-hidden select-none">
         <motion.div
-          className="flex flex-nowrap gap-12 md:gap-24 pr-12 md:pr-24"
+          className="flex flex-nowrap gap-6 md:gap-10 pr-6 md:pr-10" // تقليل المسافات هنا
           animate={{
-            x: ["0%", "-50%"], // التحرك لنصف المصفوفة لضمان الحلقة اللانهائية
+            x: ["0%", "-50%"], 
           }}
           transition={{
-            duration: 25, // سرعة الحركة (زد الرقم لتقليل السرعة)
+            duration: 30, // زدنا المدة قليلاً لأن الصور أكبر لكي لا تبدو الحركة سريعة جداً ومزعجة
             ease: "linear",
             repeat: Infinity,
           }}
-          style={{ display: "flex" }} // لضمان بقاء العناصر على خط واحد
+          style={{ display: "flex" }}
         >
           {doublePartners.map((partner, idx) => (
             <div key={idx} className="flex-shrink-0 flex items-center justify-center">
@@ -41,8 +41,8 @@ const PartnerMarquee = () => {
                 src={`/assets/partners/${partner}`}
                 alt="Partner"
                 loading="lazy"
-                // حجم متوازن للجوال واللابتوب مع تأثيرات الـ Hover
-                className="h-20 md:h-40 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-300 transform-gpu hover:scale-110"
+                // زيادة الحجم هنا: h-40 للجوال و h-64 للابتوب
+                className="h-40 md:h-64 w-auto object-contain brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-300 transform-gpu hover:scale-105"
               />
             </div>
           ))}
