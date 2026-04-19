@@ -17,28 +17,33 @@ const CustomCursor = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
     
-    const interactiveElements = document.querySelectorAll('a, button, .interactive');
+    // نحدد جميع العناصر التفاعلية
+    const interactiveElements = document.querySelectorAll('a, button, .interactive, p, h1, h2, h3, span');
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', handleHover);
       el.addEventListener('mouseleave', handleUnhover);
     });
 
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, [mouseX, mouseY]);
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-6 h-6 bg-brand-blue rounded-full pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+      // تم حذف mix-blend-difference وأضفنا opacity خفيفة لكي لا يغطي النص تماماً
+      className="fixed top-0 left-0 w-6 h-6 bg-brand-blue rounded-full pointer-events-none z-[9999] hidden md:block"
       style={{
         x: mouseX,
         y: mouseY,
         translateX: '-50%',
         translateY: '-50%',
         scale: isHovered ? 2.5 : 1,
+        // أضفنا شفافية بسيطة عند الهوفر ليعطي تأثيراً جمالياً خلف النص
+        opacity: isHovered ? 0.6 : 1,
       }}
     />
   );
 };
 
-// تأكد من وجود هذا السطر هنا أيضاً
 export default CustomCursor;
