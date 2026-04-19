@@ -1,26 +1,9 @@
-# تجاهل مجلدات الميديا الثقيلة في كل مكان
-assets/portfolio/
-assets/team/
-public/assets/portfolio/
-public/assets/team/
-
-# تجاهل ملفات الصور والفيديوهات (لأننا نقلناها لـ Cloudinary)
-*.mp4
-*.mov
-*.png
-*.jpg
-*.jpeg
-*.gif
-
-# السماح فقط بالأيقونات والخطوط والشعارات (لأن حجمها صغير ومهمة للكود)
-!**/icons/
-!**/icons/*.svg
-!**/fonts/
-!**/logo/
-!**/partners/
-!**/PATTERN_02/
-
-# تجاهل ملفات النظام والمكتبات
 node_modules/
 dist/
+.env
+*.mp4
+*.mov
+*.avi
+*.zip
+.vscode/
 .DS_Store

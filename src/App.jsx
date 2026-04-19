@@ -5,6 +5,8 @@ import { AnimatePresence } from 'framer-motion';
 // Layout Components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import CustomCursor from './components/ui/CustomCursor';
+import PageTransition from './components/ui/PageTransition';
 
 // Pages
 import Home from './pages/Home';
@@ -28,10 +30,10 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+        <Route path="/portfolio" element={<PageTransition><Portfolio /></PageTransition>} />
+        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );
@@ -41,6 +43,7 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <CustomCursor />
       <div className="flex flex-col min-h-screen bg-brand-dark text-white font-montserrat selection:bg-brand-blue selection:text-white">
         <Navbar />
         

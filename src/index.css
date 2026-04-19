@@ -145,11 +145,22 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50;
   }
-  
-  .blue-separator {
-    @apply w-full h-[1px] bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent;
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .blue-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+    margin: 2rem 0;
+  }
+
   .section-tag {
     @apply inline-block text-brand-blue text-sm font-semibold uppercase tracking-widest mb-4;
   }
@@ -164,5 +175,11 @@
   
   .nav-link.active {
     @apply text-white;
+  }
+}
+
+@media (min-width: 768px) {
+  a, button, .cursor-pointer {
+    cursor: none !important;
   }
 }
