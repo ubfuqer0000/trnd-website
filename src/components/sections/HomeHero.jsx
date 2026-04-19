@@ -70,10 +70,7 @@ export default memo(function HomeHero() {
             Shape it <span className="text-brand-blue block md:inline">ALL!</span>
           </h1>
           
-          <p className="mt-6 md:mt-8 text-white/80 text-base md:text-2xl text-center max-w-[90%] md:max-w-3xl font-medium leading-relaxed drop-shadow-lg">
-            In 2017, the TRND made its debut in the industry. <br className="hidden md:block" />
-            In 2024, a new leadership acquisition marked a pivotal moment.
-          </p>
+        
         </motion.div>
 
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-brand-dark/50 md:to-brand-dark/30 pointer-events-none" />
